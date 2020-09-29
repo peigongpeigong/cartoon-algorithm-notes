@@ -1,4 +1,4 @@
-package com.peigong.algorithm.chapter3;
+package com.peigong.algorithm.chapter3.tree;
 
 public interface Iterator {
 
@@ -18,6 +18,8 @@ public interface Iterator {
                 return PostOrderWithStackIterator.getInstance();
             case IN_STACK_MODE:
                 return InOrderWithStackIterator.getInstance();
+            case LEVEL_ORDER_MODE:
+                return LevelOrderIterator.getInstance();
             default:
                 return null;
         }

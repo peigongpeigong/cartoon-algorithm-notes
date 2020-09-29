@@ -1,4 +1,4 @@
-package com.peigong.algorithm.chapter3;
+package com.peigong.algorithm.chapter3.tree;
 
 /**
  * @author: lilei
@@ -15,6 +15,7 @@ public class InOrderIterator implements Iterator {
         iterate(node.getRight());
     }
 
+    private InOrderIterator(){}
     private volatile static InOrderIterator instance;
 
     public static InOrderIterator getInstance() {

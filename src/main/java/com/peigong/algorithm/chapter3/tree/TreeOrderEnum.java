@@ -1,4 +1,4 @@
-package com.peigong.algorithm.chapter3;
+package com.peigong.algorithm.chapter3.tree;
 
 public enum TreeOrderEnum {
 
@@ -8,6 +8,7 @@ public enum TreeOrderEnum {
     PRE_STACK_MODE(3),
     IN_STACK_MODE(4),
     POST_STACK_MODE(5),
+    LEVEL_ORDER_MODE(6),
     ;
 
 

@@ -1,4 +1,4 @@
-package com.peigong.algorithm.chapter3;
+package com.peigong.algorithm.chapter3.tree;
 
 import org.apache.commons.collections4.CollectionUtils;
 
@@ -71,6 +71,8 @@ public class TreeNode<E> {
         root.setIterator(Iterator.get(TreeOrderEnum.POST_MODE));
         root.iterate();
         root.setIterator(Iterator.get(TreeOrderEnum.POST_STACK_MODE));
+        root.iterate();
+        root.setIterator(Iterator.get(TreeOrderEnum.LEVEL_ORDER_MODE));
         root.iterate();
     }
 }

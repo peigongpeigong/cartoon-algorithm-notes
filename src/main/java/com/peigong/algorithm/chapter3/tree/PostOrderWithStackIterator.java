@@ -1,4 +1,4 @@
-package com.peigong.algorithm.chapter3;
+package com.peigong.algorithm.chapter3.tree;
 
 import java.util.Stack;
 
@@ -18,6 +18,8 @@ public class PostOrderWithStackIterator implements Iterator{
         while (!temp.isEmpty()) {
             node = temp.pop();
             stack.push(node);
+            //后序遍历为左、右、中，所以这里放到临时栈的时候，先放左孩子
+            // 这样在从临时栈弹出压入最终的栈的时候，左孩子就在上边
             if (node.getLeft() != null) {
                 temp.push(node.getLeft());
             }
@@ -29,6 +31,8 @@ public class PostOrderWithStackIterator implements Iterator{
             System.out.print(stack.pop().getData() + ",");
         }
     }
+
+    private PostOrderWithStackIterator(){}
 
     private volatile static PostOrderWithStackIterator instance;
 

@@ -1,4 +1,4 @@
-package com.peigong.algorithm.chapter3;
+package com.peigong.algorithm.chapter3.tree;
 
 /**
  * @author: lilei
@@ -15,6 +15,8 @@ public class PreOrderIterator implements Iterator {
         iterate(node.getLeft());
         iterate(node.getRight());
     }
+
+    private PreOrderIterator(){}
 
     private volatile static PreOrderIterator instance;
 

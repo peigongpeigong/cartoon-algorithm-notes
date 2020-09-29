@@ -1,4 +1,4 @@
-package com.peigong.algorithm.chapter3;
+package com.peigong.algorithm.chapter3.tree;
 
 /**
  * @author: lilei
@@ -14,6 +14,8 @@ public class PostOrderIterator implements Iterator {
         iterate(node.getRight());
         System.out.print(node.getData() + ",");
     }
+
+    private PostOrderIterator(){}
 
     private volatile static PostOrderIterator instance;
 

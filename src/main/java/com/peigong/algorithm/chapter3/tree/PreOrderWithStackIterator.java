@@ -1,4 +1,4 @@
-package com.peigong.algorithm.chapter3;
+package com.peigong.algorithm.chapter3.tree;
 
 import java.util.Stack;
 
@@ -25,6 +25,8 @@ public class PreOrderWithStackIterator implements Iterator {
             }
         }
     }
+
+    private PreOrderWithStackIterator(){}
 
     private volatile static PreOrderWithStackIterator instance;
 

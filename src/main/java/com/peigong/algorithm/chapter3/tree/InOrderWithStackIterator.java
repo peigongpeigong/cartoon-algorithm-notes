@@ -1,4 +1,4 @@
-package com.peigong.algorithm.chapter3;
+package com.peigong.algorithm.chapter3.tree;
 
 import java.util.Stack;
 
@@ -14,11 +14,15 @@ public class InOrderWithStackIterator implements Iterator {
         }
         Stack<TreeNode> stack = new Stack<>();
         while (node != null || !stack.isEmpty()) {
+            //中序遍历为左、父、右
+            //一直向下找左孩子并压入栈
             while (node != null) {
                 stack.push(node);
                 node = node.getLeft();
             }
             if (!stack.isEmpty()) {
+                //弹出最新压入的节点，第一次为最下层最左侧的叶子节点
+                //弹出并输出值
                 node = stack.pop();
                 System.out.print(node.getData() + ",");
                 node = node.getRight();
@@ -26,6 +30,7 @@ public class InOrderWithStackIterator implements Iterator {
         }
     }
 
+    private InOrderWithStackIterator(){}
 
     private volatile static InOrderWithStackIterator instance;
 
